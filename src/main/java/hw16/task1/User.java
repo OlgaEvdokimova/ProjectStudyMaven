@@ -39,7 +39,7 @@ public class User implements Comparable<User>{
 
     @Override
     public String toString() {
-        return "hw16.task1.User{" +
+        return "User{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';

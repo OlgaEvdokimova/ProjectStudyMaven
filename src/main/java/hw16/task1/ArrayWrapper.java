@@ -13,7 +13,7 @@ public class ArrayWrapper<T extends Comparable<T>> {
         return array;
     }
 
-    public T get(int index) throws IncorrectArrayWrapperIndex {
+    public T get(int index) {
         checkIndex(index);
         return array[index - 1];
 
@@ -21,24 +21,25 @@ public class ArrayWrapper<T extends Comparable<T>> {
 
     public boolean replace(int index, T el) {
         checkIndex(index);
-        for (int i = 0; i < array.length; i++) {
-            if (i == index - 1) {
-
+        index = index -1;
                 if (array instanceof String[]) {
                     String[] arrayString = (String[]) array;
                     String element = (String) el;
-                    if (arrayString[i].length() < element.length()) {
-                        arrayString[i] = element;
+                    if (arrayString[index].length() < element.length()) {
+                        arrayString[index] = element;
                         return true;
                     }
-                } else if (array instanceof Integer[]) {
-                    if (array[i].compareTo(el) < 0) {
-                        array[i] = el;
+                } else if (array instanceof Number[]) {
+                    if (array[index].compareTo(el) < 0) {
+                        array[index] = el;
+                        return true;
+                    }
+                } else {
+                    if (array[index].compareTo(el) < 0) {
+                        array[index] = el;
                         return true;
                     }
                 }
-            }
-        }
 
         return false;
     }
@@ -46,7 +47,7 @@ public class ArrayWrapper<T extends Comparable<T>> {
     public void checkIndex(int index) {
 
         if (index <= 0 || index > array.length) {
-            throw new IncorrectArrayWrapperIndex("hw16.task1.IncorrectArrayWrapperIndex");
+            throw new IncorrectArrayWrapperIndex("incorrect index of array" + index);
         }
     }
 

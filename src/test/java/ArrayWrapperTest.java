@@ -116,4 +116,26 @@ public class ArrayWrapperTest {
         Assert.assertEquals(Integer.valueOf(3), wrapper.get(2));
         Assert.assertEquals(Integer.valueOf(4), wrapper.get(3));
     }
+
+    @Test
+    public void  testReplaced_UserReplaced(){
+        User user = new User("first1", "last1");
+        User user2 = new User("first2", "last2");
+        User user3 = new User("first3", "last3");
+        User[] users = {user, user2, user3};
+        ArrayWrapper<User> userArrayWrapper = new ArrayWrapper<>(users);
+        User user4 = new User("first4", "last4");
+        boolean isReplaced = userArrayWrapper.replace(1, user4);
+
+        Assert.assertTrue(isReplaced);
+    }
+
+    @Test
+    public void testReplace_DoubleReplaced() {
+        ArrayWrapper<Double> wrapper = new ArrayWrapper<>(new Double[]{1.2, 2.2, 3.2, 4.2, 5.2});
+        boolean isReplaced = wrapper.replace(5, 100.2);
+
+        Assert.assertTrue(isReplaced);
+
+    }
 }
