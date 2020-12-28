@@ -26,7 +26,9 @@ public class Main {
         list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream).forEach(s -> System.out.print(s + " "));
         System.out.println();
         //c
-        list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream).map(Integer::parseInt).reduce((a,b) -> a+ b).ifPresent(System.out::println);
+        list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream).map(Integer::parseInt)
+                .reduce((a,b) -> a+ b)
+                .ifPresentOrElse(System.out::println, () -> System.out.println("null"));
         System.out.println();
         //d
         int max = list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream)
