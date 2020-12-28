@@ -16,7 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
         //a
-        List<String> list1 = new ArrayList<>(List.of("a1", "v2", "b3", "a1", "g5", "u4", "f2"));
+        List<String> list1 = new ArrayList<>(List.of("a1", "v2", "b3", "a11", "g5", "u4", "f2"));
         List<String> list2 = new ArrayList<>(List.of("1,2,0", "4,5", "102,31", "1023,231", "34,0"));
         int[] array = list1.stream()
                 .mapToInt(i -> Integer.parseInt(i.substring(1,2))).toArray();
@@ -40,7 +40,7 @@ public class Main {
                 .mapToInt(Integer::parseInt).max().getAsInt();
         System.out.println(max2);
         System.out.println();
-        //e
+        //e  тут использую 3 конструктор ф-ции toMap() c третьим аргументом BinaryOperator<U> mergeFunction. Это решает проблему  duplicate key
         Map<String, String> map = list1.stream().collect(Collectors.toMap(i -> i.substring(0, 1), i -> i.substring(1), (i1, i2) -> i1 + "|" + i2));
         for (Map.Entry<String, String> entry : map.entrySet()){
             System.out.println(entry.getKey() + ": " + entry.getValue());
