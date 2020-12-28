@@ -41,14 +41,14 @@ public class Main {
         Printable printable2 = println::print2;
         printable2.print();
 
-// можно еще так, но тогда в метод вводится аргумент String s
+        //можно еще так, но тогда в метод вводится аргумент String s
        Printable printable1 = System.out::println;
-//        printable1.print("Print");
+        //printable1.print("Print");
 
         System.out.println();
+        //вопрос: тесты же на все можно написать? просто как на void с Assert написать я не поняла
 
-        //2 дальше смотрите, пож. тесты Hw17Test на все остальное есть
-
+        //2 дальше смотрите, пож. тесты Hw17Test на tasks 2 - 8
         Predicate<String> lambdaStringNotNull = s -> s != null;
         System.out.println(lambdaStringNotNull.test(""));
         //3

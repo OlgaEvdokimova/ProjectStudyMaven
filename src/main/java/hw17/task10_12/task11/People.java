@@ -5,9 +5,9 @@ import java.util.Objects;
 public class People {
     private String name;
     private Integer age;
-    private String sex;
+    private Sex sex;
 
-    public People(String name, Integer age, String sex) {
+    public People(String name, Integer age, Sex sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -29,11 +29,11 @@ public class People {
         this.age = age;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
@@ -56,4 +56,8 @@ public class People {
     public String toString() {
         return name + " " + age;
     }
+}
+enum Sex{
+    FEMALE,
+    MALE
 }

@@ -55,7 +55,7 @@ public class Hw17Test1_9 {
         Assert.assertFalse(isStringStartsEnds2);
     }
 
-    //6 вот этот тест не уверена в правильности написания
+    //6 вот этот тест не уверена в правильности написания так как тут просто вывод
     @Test
     public void testHeavyBox() {
         HeavyBox heavyBox = new HeavyBox(100);

@@ -31,7 +31,7 @@ public class Main {
         //d
         int max = list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream)
                 .map(Integer::parseInt)
-                .collect(Collectors.summarizingInt(Integer::intValue)).getMax();
+                .collect(Collectors.summarizingInt(i->i)).getMax();
         System.out.println(max);
 
         int max2 = list2.stream().map(i -> i.split(",")).flatMap(Arrays::stream)
