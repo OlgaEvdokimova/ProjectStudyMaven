@@ -60,10 +60,11 @@ public class Main {
 
         System.out.println(lambdaStringNotNullAnd.and(lambdaStringNotEmptyAnd).test("Hello"));
         //5
-        Predicate<String> lambdaStringStartsAJ = s -> s.startsWith("J") || s.startsWith("N");
+        Predicate<String> lambdaStringStartsJ = s -> s.startsWith("J");
+        Predicate<String> lambdaStringStartsY = s -> s.startsWith("Y");
         Predicate<String> lambdaStringEndsA = s -> s.endsWith("A");
-        System.out.println(lambdaStringStartsAJ.and(lambdaStringEndsA).test("JYA"));
-        System.out.println(lambdaStringStartsAJ.and(lambdaStringEndsA).test("NY"));
+        System.out.println(lambdaStringStartsJ.or(lambdaStringStartsY).and(lambdaStringEndsA).test("JYA"));
+        System.out.println(lambdaStringStartsJ.or(lambdaStringStartsY).and(lambdaStringEndsA).test("NY"));
         System.out.println();
         //6
         HeavyBox heavyBox = new HeavyBox(100);

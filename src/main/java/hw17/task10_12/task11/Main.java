@@ -44,6 +44,7 @@ public class Main {
         // d
         System.out.println("по имени в обратном алфавитном порядке");
         Comparator<People> comparator = ((o1, o2) -> o2.getName().compareTo(o1.getName()));
+        peopleList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
         peopleList.stream().sorted(comparator).forEach(System.out::println);
         // e
         System.out.println("Получить человека с минимальным возрастом");

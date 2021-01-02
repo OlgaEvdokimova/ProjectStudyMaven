@@ -2,7 +2,7 @@ package hw17.task10_12.task11;
 
 import java.util.Objects;
 
-public class People {
+public class People implements Comparable<People>{
     private String name;
     private Integer age;
     private Sex sex;
@@ -55,6 +55,11 @@ public class People {
     @Override
     public String toString() {
         return name + " " + age;
+    }
+
+    @Override
+    public int compareTo(People o) {
+       return this.name.compareTo(o.name);
     }
 }
 enum Sex{

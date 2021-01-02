@@ -24,16 +24,19 @@ public class Main {
                 .findFirst().orElse(String.valueOf(0));
         System.out.println(s);
         //b
-        long countLine1 = stringList.stream().filter(s1 -> s1.equals("line1")).count();
+        long countLine1 = stringList.stream().filter("line1"::equals).count();
         System.out.println(countLine1);
+        System.out.println();
         //с
-        stringList.stream().skip(stringList.size() - 1).forEach(System.out::println);
+        String lastElem = stringList.stream().skip(stringList.size() - 1).findFirst().orElse("empty");
+        System.out.println(lastElem);
         //d
         stringList.stream().skip(1).limit(2).forEach(System.out::println);
         //e
         stringList.stream().filter(s2 -> s2.startsWith("a")).forEach(System.out::println);
         //f
-        Optional<String> line8 = stringList.stream().filter(s3 -> s3.equals("line8")).findAny();
+        Optional<String> line8 = stringList.stream().filter("line8"::equals).findAny();
+       // Optional<String> line8 = stringList.stream().anyMatch("line8"::equals);
         line8.ifPresent(System.out::println);
         //g
         boolean listHas = stringList.stream().allMatch(s4 -> s4.matches(".*1.*"));
