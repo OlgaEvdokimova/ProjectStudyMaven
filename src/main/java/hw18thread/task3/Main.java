@@ -17,14 +17,12 @@ public class Main {
     public static final String PATH = "D:\\Java\\IdeaProjects\\ProjectStudyMaven\\src\\main\\java\\hw18thread\\task3\\list.txt";
 
     public static void main(String[] args) {
-        List<String> stringList = null;
 //достаю список(Стринг) из файла
         Optional<List<String>> list = Optional.ofNullable(ClientRepository.readFile(PATH));
-        if (list.isEmpty()) {
+        List<String> stringList = list.get();
+        if (stringList.size() == 0) {
            throw new EmptyFileException("File is empty");
         } else {
-            stringList = list.get();
-
 // достаю клиентов из списка
             List<Client> clientList = ClientRepository.getClients(stringList);
             for (Client c : clientList) {

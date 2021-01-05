@@ -1,6 +1,4 @@
-1 Kate: dress, coat,
-2 Nick: shirt,
-3 Kate: glasses, pants,
-4 Kate: hat, glasses, swimsuit,
-5 Oleg: pants,
-6 Pol: pan,
+1 Kate dress, coat
+2 Nick shirt
+3 Kate glasses, pants
+4 Kate hat, glasses, swimsuit
