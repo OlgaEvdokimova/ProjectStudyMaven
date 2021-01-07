@@ -1,11 +1,13 @@
 package hw18thread.task3;
 
 import hw18thread.task3.exceptions.EmptyFileException;
+import hw18thread.task3.exceptions.NotNumberException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
-public class Main {
+public class gitMain {
     /**
      * В текстовом файле лежат данные о покупателях и их покупках (в любом удобном формате).
      * Создать классы Клиент (покупатель) и Покупка. Создать класс ClientRepository, в котором
@@ -18,18 +20,30 @@ public class Main {
 
     public static void main(String[] args) {
 //достаю список(Стринг) из файла
-        Optional<List<String>> list = Optional.ofNullable(ClientRepository.readFile(PATH));
-        List<String> stringList = list.get();
-        if (stringList.size() == 0) {
+        Optional<List<Client>> clientListOpt = Optional.ofNullable(ClientRepository.getClients(PATH));
+        List<Client> clientList = clientListOpt.get();
+        if (clientList.size() == 0) {
            throw new EmptyFileException("File is empty");
         } else {
 // достаю клиентов из списка
-            List<Client> clientList = ClientRepository.getClients(stringList);
             for (Client c : clientList) {
                 System.out.println(c);
             }
 //добавляю Клиента в список Клиентов
-            ClientRepository.addClient(clientList);
+           // ClientRepository.addClient(clientList);
+
+            System.out.println("Input ID");
+            Scanner sc = new Scanner(System.in);
+            try {
+                int n = Integer.parseInt(sc.nextLine());
+                List<Purchase> purchaseList = ClientRepository.getById(n,clientList);
+                System.out.print("List of purchase of client with id " + n  + " : ");
+                for (Purchase p : purchaseList){
+                    System.out.print(p + " ");
+                }
+            } catch (NumberFormatException e){
+                throw new NotNumberException(" Not a number, input a number");
+            }
 
         }
     }

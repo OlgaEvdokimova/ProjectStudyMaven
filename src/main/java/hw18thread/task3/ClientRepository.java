@@ -1,6 +1,7 @@
 package hw18thread.task3;
 
 import hw18thread.task3.exceptions.ClientHaveNotPurchaseException;
+import hw18thread.task3.exceptions.NotNumberException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,39 +12,29 @@ public class ClientRepository {
 
     private static final int NAME = 1;
 
-    public static List<String> readFile(String PATH) {
+    public static List<Client> getClients(String PATH) {
+        List<Client> clients = new ArrayList<>();
+        int i = 1;
         String line;
-        List<String> list = new ArrayList<>();
         try (BufferedReader bf = new BufferedReader(new FileReader(PATH))) {
             while ((line = bf.readLine()) != null) {
-                list.add(line);
-            }
+                List<Purchase> purchaseList = new ArrayList<>();
+                String[] splitLine = line.split("\\W+");
+                Client client = new Client();
+                client.setId(i++);
+                client.setName(splitLine[NAME]);
+                if (splitLine.length > 2) {
+                    for (int j = 2; j < splitLine.length; j++) {
+                        purchaseList.add(new Purchase(splitLine[j]));
+                    }
+                } else
+                    throw new ClientHaveNotPurchaseException("Client " + client.getName() + " does not have any purchase");
+                client.setPurchaseList(purchaseList);
+                clients.add(client);
 
+            }
         } catch (IOException e) {
             e.getMessage();
-        }
-        return list;
-    }
-
-    public static List<Client> getClients(List<String> listOfClients) {
-
-        List<Client> clients = new ArrayList<>();
-
-        for (int i = 0; i < listOfClients.size(); i++) {
-            List<Purchase> purchaseList = new ArrayList<>();
-            String[] splitLine = listOfClients.get(i).split("\\W+");
-            Client client = new Client();
-            client.setId(i + 1);
-            client.setName(splitLine[NAME]);
-            if (splitLine.length > 2) {
-                for (int j = 2; j < splitLine.length; j++) {
-                    purchaseList.add(new Purchase(splitLine[j]));
-                }
-            } else
-                throw new ClientHaveNotPurchaseException("Client " + client.getName() + " does not have any purchase");
-            client.setPurchaseList(purchaseList);
-            clients.add(client);
-
         }
         return clients;
     }
@@ -76,6 +67,11 @@ public class ClientRepository {
         }
 
     }
+
+    public static List<Purchase> getById(int id, List<Client> clientList) throws NotNumberException {
+        Client client = clientList.stream().filter(s -> s.getId() == id).findFirst().get();
+        return client.getPurchaseList();
+    }
 }
 
 
@@ -102,4 +98,17 @@ public class ClientRepository {
 //            e.printStackTrace();
 //        }
 //        return clients;
+//    }
+
+//    public static List<String> readFile(String PATH) {
+//        String line;
+//        List<String> list = new ArrayList<>();
+//        try (BufferedReader bf = new BufferedReader(new FileReader(PATH))) {
+//            while ((line = bf.readLine()) != null) {
+//                list.add(line);
+//            }
+//        } catch (IOException e) {
+//            e.getMessage();
+//        }
+//        return list;
 //    }

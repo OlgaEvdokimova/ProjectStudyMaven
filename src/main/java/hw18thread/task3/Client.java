@@ -7,6 +7,7 @@ import java.util.Optional;
 public class Client {
     private int id;
     private String name;
+
     private List<Purchase> purchaseList;
 
     public Client() {
