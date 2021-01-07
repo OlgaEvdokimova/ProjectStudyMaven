@@ -2,12 +2,13 @@ package hw18thread.task3;
 
 import hw18thread.task3.exceptions.EmptyFileException;
 import hw18thread.task3.exceptions.NotNumberException;
+import hw18thread.task3.exceptions.WrongEmailException;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class gitMain {
+public class Main {
     /**
      * В текстовом файле лежат данные о покупателях и их покупках (в любом удобном формате).
      * Создать классы Клиент (покупатель) и Покупка. Создать класс ClientRepository, в котором
@@ -23,27 +24,49 @@ public class gitMain {
         Optional<List<Client>> clientListOpt = Optional.ofNullable(ClientRepository.getClients(PATH));
         List<Client> clientList = clientListOpt.get();
         if (clientList.size() == 0) {
-           throw new EmptyFileException("File is empty");
+            throw new EmptyFileException("File is empty");
         } else {
 // достаю клиентов из списка
             for (Client c : clientList) {
                 System.out.println(c);
             }
-//добавляю Клиента в список Клиентов
-           // ClientRepository.addClient(clientList);
-
-            System.out.println("Input ID");
+            System.out.println("1 - добавить нового покупателя со списком покупок ");
+            System.out.println("2 - по id покупателя найти список его покупок");
+            System.out.println("3 - по email найти покупателя");
             Scanner sc = new Scanner(System.in);
-            try {
-                int n = Integer.parseInt(sc.nextLine());
-                List<Purchase> purchaseList = ClientRepository.getById(n,clientList);
-                System.out.print("List of purchase of client with id " + n  + " : ");
-                for (Purchase p : purchaseList){
-                    System.out.print(p + " ");
-                }
-            } catch (NumberFormatException e){
-                throw new NotNumberException(" Not a number, input a number");
+            String c = sc.nextLine();
+            switch (c) {
+                case "1":
+                    ClientRepository.addClient(clientList);
+                    break;
+                case "2":
+
+                    System.out.println("Input ID");
+                    try {
+                        String id = sc.nextLine();
+                        int n = Integer.parseInt(id);
+                        Optional<List<Purchase>> purchaseList = ClientRepository.getPurchaseListById(id, clientList);
+                        System.out.print("List of purchase of client with id " + n + " : ");
+                        if (purchaseList.isPresent()) {
+                            for (Purchase p : purchaseList.get()) {
+                                System.out.print(p + " ");
+                            }
+                        }
+                    } catch (NumberFormatException e) {
+                        throw new NotNumberException(" Not a number, input a number");
+                    }
+                    break;
+                case "3":
+                    System.out.println();
+                    String email = sc.nextLine();
+                    if (!email.equals("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}")){
+                        throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
+                    }
+                    Optional<Client> clientByEmail = ClientRepository.getByEmail(email, clientList);
+                    System.out.println(clientByEmail.get());
+                    break;
             }
+
 
         }
     }

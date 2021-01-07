@@ -5,25 +5,26 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class Client {
-    private int id;
+    private String id;
     private String name;
-
+    private String email;
     private List<Purchase> purchaseList;
 
     public Client() {
     }
 
-    public Client(int id, String name, List<Purchase> purchaseList) {
+    public Client(String id, String name, String email, List<Purchase> purchaseList) {
         this.id = id;
         this.name = name;
+        this.email = email;
         this.purchaseList = purchaseList;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -33,6 +34,14 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<Purchase> getPurchaseList() {
@@ -48,19 +57,21 @@ public class Client {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
-        return Objects.equals(name, client.name) &&
+        return Objects.equals(id, client.id) &&
+                Objects.equals(name, client.name) &&
+                Objects.equals(email, client.email) &&
                 Objects.equals(purchaseList, client.purchaseList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, purchaseList);
+        return Objects.hash(id, name, email, purchaseList);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(id).append(" ").append(name).append(": ");
+        sb.append(id).append(" ").append(name).append(" ").append(email).append(": ");
         for (Purchase p : purchaseList){
             sb.append(p).append(", ");
         }
