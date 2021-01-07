@@ -2,6 +2,7 @@ package hw18thread.task3;
 
 import hw18thread.task3.exceptions.ClientHaveNotPurchaseException;
 import hw18thread.task3.exceptions.NotNumberException;
+import hw18thread.task3.exceptions.WrongEmailException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -45,14 +46,19 @@ public class ClientRepository {
     }
 
 
-    public static void addClient(List<Client> listOfClients) {
+    public static void addClient(String PATH) {
+        List<Client> listOfClients = getClients(PATH);
         Client client = new Client();
         client.setId((String.valueOf(listOfClients.size() + 1)));
         Scanner sc = new Scanner(System.in);
         System.out.println("New client name");
         client.setName(sc.nextLine());
         System.out.println("Email");
-        client.setEmail(sc.nextLine());
+        String email = sc.nextLine();
+        if (!(email.equals("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}"))){
+            throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
+        }
+        client.setEmail(email);
         List<Purchase> purchaseList = new ArrayList<>();
         while (true) {
             System.out.println("Do u wanna add purchase (add + or -)");
@@ -75,12 +81,14 @@ public class ClientRepository {
 
     }
 
-    public static Optional<List<Purchase>> getPurchaseListById(String id, List<Client> clientList)  {
+    public static Optional<List<Purchase>> getPurchaseListById(String id, String PATH)  {
+        List<Client> clientList = getClients(PATH);
         Client client = clientList.stream().filter(s -> s.getId().equals(id)).findFirst().get();
         return Optional.ofNullable(client.getPurchaseList());
     }
 
-    public static Optional<Client> getByEmail(String regex, List<Client> clientList) {
+    public static Optional<Client> getByEmail(String regex, String PATH) {
+        List<Client> clientList = getClients(PATH);
         Pattern pattern = Pattern.compile(regex);
         for (Client cl : clientList) {
             Matcher matcher = pattern.matcher(cl.getEmail());

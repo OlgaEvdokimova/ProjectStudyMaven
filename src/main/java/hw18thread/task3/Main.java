@@ -37,7 +37,7 @@ public class Main {
             String c = sc.nextLine();
             switch (c) {
                 case "1":
-                    ClientRepository.addClient(clientList);
+                    ClientRepository.addClient(PATH);
                     break;
                 case "2":
 
@@ -45,7 +45,7 @@ public class Main {
                     try {
                         String id = sc.nextLine();
                         int n = Integer.parseInt(id);
-                        Optional<List<Purchase>> purchaseList = ClientRepository.getPurchaseListById(id, clientList);
+                        Optional<List<Purchase>> purchaseList = ClientRepository.getPurchaseListById(id, PATH);
                         System.out.print("List of purchase of client with id " + n + " : ");
                         if (purchaseList.isPresent()) {
                             for (Purchase p : purchaseList.get()) {
@@ -57,12 +57,11 @@ public class Main {
                     }
                     break;
                 case "3":
-                    System.out.println();
-                    String email = sc.nextLine();
-                    if (!email.equals("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}")){
+                    String email = sc.next();
+                    if (!(email.equals("[\\w+\\-\\.]+\\@\\w+\\.\\w{2,4}"))){
                         throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
                     }
-                    Optional<Client> clientByEmail = ClientRepository.getByEmail(email, clientList);
+                    Optional<Client> clientByEmail = ClientRepository.getByEmail(email, PATH);
                     System.out.println(clientByEmail.get());
                     break;
             }
