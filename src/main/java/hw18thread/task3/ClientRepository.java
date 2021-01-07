@@ -54,8 +54,10 @@ public class ClientRepository {
         System.out.println("New client name");
         client.setName(sc.nextLine());
         System.out.println("Email");
-        String email = sc.nextLine();
-        if (!(email.equals("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}"))){
+        String email = sc.next();
+        Pattern pattern = Pattern.compile("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}");
+        Matcher matcher = pattern.matcher(email);
+        if (!matcher.find()) {
             throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
         }
         client.setEmail(email);

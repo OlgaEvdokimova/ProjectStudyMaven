@@ -7,6 +7,8 @@ import hw18thread.task3.exceptions.WrongEmailException;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     /**
@@ -58,7 +60,9 @@ public class Main {
                     break;
                 case "3":
                     String email = sc.next();
-                    if (!(email.equals("[\\w+\\-\\.]+\\@\\w+\\.\\w{2,4}"))){
+                    Pattern pattern = Pattern.compile("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}");
+                    Matcher matcher = pattern.matcher(email);
+                    if (!matcher.find()) {
                         throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
                     }
                     Optional<Client> clientByEmail = ClientRepository.getByEmail(email, PATH);
