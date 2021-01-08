@@ -83,63 +83,25 @@ public class ClientRepository {
 
     }
 
-    public static Optional<List<Purchase>> getPurchaseListById(String id, String PATH)  {
+    public static Optional<List<Purchase>> getPurchaseListById(String id, String PATH) {
         List<Client> clientList = getClients(PATH);
-        Client client = clientList.stream().filter(s -> s.getId().equals(id)).findFirst().get();
-        return Optional.ofNullable(client.getPurchaseList());
+
+        return Optional.ofNullable(clientList.stream()
+                .filter(s -> s.getId().equals(id))
+                .findFirst().orElse(null).getPurchaseList());
+        //подсказыывает что NullPointer может вернуться, что делать? и см. ниже комент
     }
 
-    public static Optional<Client> getByEmail(String regex, String PATH) {
+
+    // а тут не говорит что NullPointer может вернуться, вааай
+    public static Optional<Client> getByEmail(String email, String PATH) {
         List<Client> clientList = getClients(PATH);
-        Pattern pattern = Pattern.compile(regex);
-        for (Client cl : clientList) {
-            Matcher matcher = pattern.matcher(cl.getEmail());
-            if (matcher.find()) {
-                return Optional.ofNullable(cl);
-            }
-        }
-        return null;
+        return Optional.ofNullable(clientList.stream()
+                .filter(c -> c.getEmail().equals(email))
+                .findFirst().orElse(null));
     }
 }
 
 // email regex [\w+\-\.]+@\w+\.\w{2,4}
 // [\w+@?\-\.]+ any pattern in line
 
-
-//public static List<Client> getClients(String PATH)  {
-//
-//        List<Client> clients = new ArrayList<>();
-//        String line;
-//        try (BufferedReader bf = new BufferedReader(new FileReader(PATH))) {
-//            while ((line = bf.readLine()) != null) {
-//                List<Purchase> purchaseList = new ArrayList<>();
-//                String[] splitLine = line.split("\\W+");
-//                Client client = new Client();
-//                client.setId(ID);
-//                client.setName(splitLine[NAME]);
-//                if (splitLine.length > 2) {
-//                    for (int i = 1; i < splitLine.length; i++) {
-//                        purchaseList.add(new Purchase(splitLine[i]));
-//                    }
-//                } else throw new ClientHaveNotPurchaseException("Client " + client.getName() + " does not have any purchase");
-//                client.setPurchaseList(purchaseList);
-//                clients.add(client);
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return clients;
-//    }
-
-//    public static List<String> readFile(String PATH) {
-//        String line;
-//        List<String> list = new ArrayList<>();
-//        try (BufferedReader bf = new BufferedReader(new FileReader(PATH))) {
-//            while ((line = bf.readLine()) != null) {
-//                list.add(line);
-//            }
-//        } catch (IOException e) {
-//            e.getMessage();
-//        }
-//        return list;
-//    }
