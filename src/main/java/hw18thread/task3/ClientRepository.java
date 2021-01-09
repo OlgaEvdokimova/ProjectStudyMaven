@@ -1,7 +1,5 @@
 package hw18thread.task3;
 
-import hw18thread.task3.exceptions.ClientHaveNotPurchaseException;
-import hw18thread.task3.exceptions.NotNumberException;
 import hw18thread.task3.exceptions.WrongEmailException;
 
 import java.io.*;
@@ -30,8 +28,7 @@ public class ClientRepository {
                     for (int j = 3; j < splitLine.length; j++) {
                         purchaseList.add(new Purchase(splitLine[j]));
                     }
-                } else
-                    throw new ClientHaveNotPurchaseException("Client " + client.getName() + " does not have any purchase");
+                }
                 client.setPurchaseList(purchaseList);
                 clients.add(client);
 
@@ -51,20 +48,23 @@ public class ClientRepository {
         System.out.println("New client name");
         client.setName(sc.nextLine());
         System.out.println("Email");
-        String email = sc.next();
+        String str = sc.nextLine();
         Pattern pattern = Pattern.compile("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}");
-        Matcher matcher = pattern.matcher(email);
+        Matcher matcher = pattern.matcher(str);
         if (!matcher.find()) {
             throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
         }
-        client.setEmail(email);
+        client.setEmail(str);
         List<Purchase> purchaseList = new ArrayList<>();
         while (true) {
             System.out.println("Do u wanna add purchase (add + or -)");
-            if (sc.nextLine().equalsIgnoreCase("+")) {
+            str = sc.nextLine();
+            if (str.equalsIgnoreCase("+")) {
                 System.out.println("Write purchase");
                 purchaseList.add(new Purchase(sc.nextLine()));
-            } else break;
+            } else {
+                break;
+            }
         }
         client.setPurchaseList(purchaseList);
         try (FileWriter fw = new FileWriter("D:\\Java\\IdeaProjects\\ProjectStudyMaven\\src\\main\\java\\hw18thread\\task3\\list.txt")) {
