@@ -22,12 +22,7 @@ public class Main {
     public static final String PATH = "D:\\Java\\IdeaProjects\\ProjectStudyMaven\\src\\main\\java\\hw18thread\\task3\\list.txt";
 
     public static void main(String[] args) {
-        //я не доработала проверками case 2, 3
-        // если я делаю .findFirst().orElse(null); как проверить вернулся null или то, что нужно?
-        // ниже в case 2 я продублировала вопрос
-        // или я не так вообще делаю
 
-//достаю список(Стринг) из файла
         Optional<List<Client>> clientListOpt = Optional.ofNullable(ClientRepository.getClients(PATH));
         List<Client> clientList = clientListOpt.get();
         if (clientList.size() == 0) {
@@ -54,22 +49,17 @@ public class Main {
                         int n = Integer.parseInt(id);
                         Optional<List<Purchase>> purchaseList = ClientRepository.getPurchaseListById(id, PATH);
                         System.out.print("List of purchase of client with id " + n + " : ");
-                        //как проверить на null (isPresent()??)  ? метод возвращает список или null
-                        //оно кидает NuLLPointer и в else не доходит
-                        //а в case 3 все работает вроде как
                         if (purchaseList.isPresent()) {
                             for (Purchase p : purchaseList.get()) {
                                 System.out.print(p + " ");
                             }
-                        } else {
-                            System.out.println("There is no id = " + id);
                         }
-
                     } catch (NumberFormatException e) {
                         throw new NotNumberException(" Not a number, input a number");
                     }
                     break;
                 case "3":
+                    System.out.println("Input Email");
                     String email = sc.next();
                     Pattern pattern = Pattern.compile("[\\w+\\-\\.]+@\\w+\\.\\w{2,4}");
                     Matcher matcher = pattern.matcher(email);
@@ -77,12 +67,7 @@ public class Main {
                         throw new WrongEmailException("wrong email: login consists from [A-Za-z][0-9] . - _");
                     }
                     Optional<Client> clientByEmail = ClientRepository.getByEmail(email, PATH);
-                    if (clientByEmail.isPresent()) {
-                        System.out.println(clientByEmail.get());
-                    } else {
-                        System.out.println("There is no such email");
-                    }
-
+                    clientByEmail.ifPresent(System.out::println);
                     break;
             }
 

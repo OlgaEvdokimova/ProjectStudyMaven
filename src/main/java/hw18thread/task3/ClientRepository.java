@@ -5,10 +5,7 @@ import hw18thread.task3.exceptions.NotNumberException;
 import hw18thread.task3.exceptions.WrongEmailException;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,7 +37,7 @@ public class ClientRepository {
 
             }
         } catch (IOException e) {
-            e.getMessage();
+            e.printStackTrace();
         }
         return clients;
     }
@@ -85,20 +82,17 @@ public class ClientRepository {
 
     public static Optional<List<Purchase>> getPurchaseListById(String id, String PATH) {
         List<Client> clientList = getClients(PATH);
-
         return Optional.ofNullable(clientList.stream()
                 .filter(s -> s.getId().equals(id))
-                .findFirst().orElse(null).getPurchaseList());
-        //подсказыывает что NullPointer может вернуться, что делать? и см. ниже комент
+                .findFirst().orElseThrow(() -> new NoSuchElementException("No client with id: " + id)).getPurchaseList());
     }
 
 
-    // а тут не говорит что NullPointer может вернуться, вааай
     public static Optional<Client> getByEmail(String email, String PATH) {
         List<Client> clientList = getClients(PATH);
         return Optional.ofNullable(clientList.stream()
                 .filter(c -> c.getEmail().equals(email))
-                .findFirst().orElse(null));
+                .findFirst().orElseThrow(()-> new NoSuchElementException("No such email ")));
     }
 }
 
