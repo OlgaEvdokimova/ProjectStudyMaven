@@ -49,11 +49,7 @@ public class Main {
                         int n = Integer.parseInt(id);
                         Optional<List<Purchase>> purchaseList = ClientRepository.getPurchaseListById(id, PATH);
                         System.out.print("List of purchase of client with id " + n + " : ");
-                        if (purchaseList.isPresent()) {
-                            for (Purchase p : purchaseList.get()) {
-                                System.out.print(p + " ");
-                            }
-                        }
+                        purchaseList.ifPresent(System.out::println);
                     } catch (NumberFormatException e) {
                         throw new NotNumberException(" Not a number, input a number");
                     }

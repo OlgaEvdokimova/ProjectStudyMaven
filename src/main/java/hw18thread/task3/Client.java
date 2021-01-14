@@ -1,5 +1,6 @@
 package hw18thread.task3;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,6 +46,9 @@ public class Client {
     }
 
     public List<Purchase> getPurchaseList() {
+        if (purchaseList.size() == 0){
+            return new ArrayList<>();
+        }
         return purchaseList;
     }
 
