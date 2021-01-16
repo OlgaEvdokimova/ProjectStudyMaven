@@ -16,7 +16,7 @@ public class ClientRepositoryImp implements ClientRepository {
     @Override
     public void addClient(Client client) {
         List<Client> clientList = FileReaderGetClientsUtil.getClients();
-        try (FileWriter fw = new FileWriter("D:\\Java\\IdeaProjects\\ProjectStudyMaven\\src\\main\\java\\freeIt\\hw18thread\\task3\\files\\list.txt")) {
+        try (FileWriter fw = new FileWriter(PATH)) {
             for (Client s : clientList) {
                 fw.write(s.toString());
                 fw.write("\n");
