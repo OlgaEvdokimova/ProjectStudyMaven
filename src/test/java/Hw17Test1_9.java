@@ -1,10 +1,7 @@
-import hw17.task1_9.HeavyBox;
+import freeIt.hw17.task1_9.HeavyBox;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.function.Consumer;
 import java.util.function.Function;

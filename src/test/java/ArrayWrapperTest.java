@@ -1,6 +1,6 @@
-import hw16.task1.ArrayWrapper;
-import hw16.task1.IncorrectArrayWrapperIndex;
-import hw16.task1.User;
+import freeIt.hw16.task1.ArrayWrapper;
+import freeIt.hw16.task1.IncorrectArrayWrapperIndex;
+import freeIt.hw16.task1.User;
 import org.junit.Assert;
 import org.junit.Test;
 
