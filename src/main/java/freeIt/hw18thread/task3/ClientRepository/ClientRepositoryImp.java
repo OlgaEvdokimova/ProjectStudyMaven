@@ -41,10 +41,19 @@ public class ClientRepositoryImp implements ClientRepository {
 
     @Override
     public  Optional<Client> getByEmail(String email) {
+        Client client;
         List<Client> clientList = FileReaderGetClientsUtil.getClients();
+//        for (int i = 0; i < clientList.size(); i++){
+//            if (clientList.get(i).getEmail().equals(email)) {
+//            client = clientList.get(i);
+//            return Optional.ofNullable(client);
+//            }
+//        }
+//        client = null;
+//        return Optional.ofNullable(client);
         return Optional.ofNullable(clientList.stream()
                 .filter(c -> c.getEmail().equals(email))
-                .findFirst().orElseThrow(() -> new NoSuchElementException("No such client")));
+                .findFirst().orElse(null));
     }
 }
 

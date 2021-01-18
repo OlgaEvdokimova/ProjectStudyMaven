@@ -57,11 +57,14 @@ public class Main {
                 String email = ScannerUtil.scannerString();
                 if (Validator.validEmail(email)) {
                     Optional<Client> clientByEmail = clientRepositoryImp.getByEmail(email);
-                    clientByEmail.ifPresent(System.out::println);
+                    if (clientByEmail.isPresent()) {
+                        System.out.println(clientByEmail.get());
+                    } else {
+                        System.out.println("No such client");
+                    }
                 }
                 break;
         }
-
 
     }
 }
