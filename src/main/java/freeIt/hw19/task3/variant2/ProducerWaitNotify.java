@@ -1,8 +1,6 @@
 package freeIt.hw19.task3.variant2;
-
 import java.util.Queue;
 import java.util.Random;
-import java.util.concurrent.BlockingQueue;
 
 public class ProducerWaitNotify implements Runnable{
     private Queue<Integer> queue;
@@ -16,17 +14,17 @@ public class ProducerWaitNotify implements Runnable{
     public void run() {
         Random random = new Random();
         while (true) {
-            synchronized (this) {
-                while (queue.size() == CAPACITY){
+            synchronized (queue) {
+                while (queue.size() >= CAPACITY){
                     try {
-                        wait();
+                       queue.wait();
                     } catch (InterruptedException e) {
                         System.out.println("Thread is interrupted");
                     }
                 }
                 queue.offer(random.nextInt(11));
                 System.out.println(queue);
-                this.notify();
+                queue.notify();
 
             }
         }
