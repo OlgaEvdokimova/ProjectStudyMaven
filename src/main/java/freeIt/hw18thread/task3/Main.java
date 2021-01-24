@@ -1,19 +1,14 @@
 package freeIt.hw18thread.task3;
 
-import freeIt.hw18thread.task3.Client.Client;
-import freeIt.hw18thread.task3.Client.ClientCreator;
-import freeIt.hw18thread.task3.Purchase.Purchase;
-import freeIt.hw18thread.task3.ClientRepository.ClientRepositoryImp;
-import freeIt.hw18thread.task3.exceptions.NotNumberException;
-import freeIt.hw18thread.task3.exceptions.WrongEmailException;
+import freeIt.hw18thread.task3.client.Client;
+import freeIt.hw18thread.task3.client.ClientCreator;
+import freeIt.hw18thread.task3.purchase.Purchase;
+import freeIt.hw18thread.task3.clientRepository.ClientRepositoryImp;
 import freeIt.hw18thread.task3.scannerUtil.ScannerUtil;
 import freeIt.hw18thread.task3.validator.Validator;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
     /**

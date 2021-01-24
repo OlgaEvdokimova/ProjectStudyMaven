@@ -1,6 +1,6 @@
-package freeIt.hw18thread.task3.Client;
+package freeIt.hw18thread.task3.client;
 
-import freeIt.hw18thread.task3.Purchase.Purchase;
+import freeIt.hw18thread.task3.purchase.Purchase;
 
 import java.util.ArrayList;
 import java.util.List;

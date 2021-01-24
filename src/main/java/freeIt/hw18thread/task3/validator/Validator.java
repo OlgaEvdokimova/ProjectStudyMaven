@@ -1,6 +1,6 @@
 package freeIt.hw18thread.task3.validator;
 
-import freeIt.hw18thread.task3.Client.Client;
+import freeIt.hw18thread.task3.client.Client;
 import freeIt.hw18thread.task3.exceptions.EmptyFileException;
 import freeIt.hw18thread.task3.exceptions.NotNumberException;
 import freeIt.hw18thread.task3.exceptions.WrongEmailException;

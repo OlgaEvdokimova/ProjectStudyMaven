@@ -1,4 +1,4 @@
-package freeIt.hw18thread.task3.Purchase;
+package freeIt.hw18thread.task3.purchase;
 
 import java.util.Objects;
 

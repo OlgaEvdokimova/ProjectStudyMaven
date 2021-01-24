@@ -1,10 +1,8 @@
-package freeIt.hw18thread.task3.ClientRepository;
+package freeIt.hw18thread.task3.clientRepository;
 
-import freeIt.hw18thread.task3.Client.Client;
+import freeIt.hw18thread.task3.client.Client;
 import freeIt.hw18thread.task3.FileReaderGetClientsUtil;
-import freeIt.hw18thread.task3.Purchase.Purchase;
-import freeIt.hw18thread.task3.scannerUtil.ScannerUtil;
-import freeIt.hw18thread.task3.validator.Validator;
+import freeIt.hw18thread.task3.purchase.Purchase;
 
 import java.io.*;
 import java.util.*;

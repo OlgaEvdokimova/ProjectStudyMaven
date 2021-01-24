@@ -1,13 +1,10 @@
-package freeIt.hw18thread.task3.Client;
+package freeIt.hw18thread.task3.client;
 
 import freeIt.hw18thread.task3.FileReaderGetClientsUtil;
-import freeIt.hw18thread.task3.Purchase.Purchase;
+import freeIt.hw18thread.task3.purchase.Purchase;
 import freeIt.hw18thread.task3.scannerUtil.ScannerUtil;
 import freeIt.hw18thread.task3.validator.Validator;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 

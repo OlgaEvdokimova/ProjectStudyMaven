@@ -1,11 +1,10 @@
 package freeIt.hw18thread.task3;
 
-import freeIt.hw18thread.task3.Client.Client;
-import freeIt.hw18thread.task3.Purchase.Purchase;
+import freeIt.hw18thread.task3.client.Client;
+import freeIt.hw18thread.task3.purchase.Purchase;
 import freeIt.hw18thread.task3.exceptions.FileNotFoundExceptionOrOtherProblem;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
