@@ -17,7 +17,8 @@ public class NewThread extends Thread {
             System.out.println();
             char c = sb.substring(0, 1).charAt(0);
             c += 1;
-            sb.replace(0, 1, String.valueOf(c));
+            sb.setCharAt(0, c);
+            //sb.replace(0, 1, String.valueOf(c));
         }
         try {
             Thread.sleep(1000);
