@@ -34,7 +34,24 @@ public class Main {
         //Set<String> set = new TreeSet<>();
         Map<String, Set<String>> map = new TreeMap<>();
 
-        //сделать всё вместе одним заходом что-то не придумалось, поэтому сначала создаю шаблон Map( с ключами и пустым Set)
+
+
+        for (int i = 0; i < list.size(); i++) {
+            if (!map.containsKey(list.get(i).substring(0, 1))) {
+                map.put(list.get(i).substring(0, 1), new TreeSet<>());
+            }
+            map.get(list.get(i).substring(0, 1)).add(list.get(i));
+        }
+
+        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
+    }
+}
+
+
+//создаю шаблон Map( с ключами и пустым Set)
 //
 //        for (int i = 0; i < list.size(); i++) {
 //            if (list.get(i).startsWith(list.get(i).substring(0, 1))) {
@@ -52,18 +69,3 @@ public class Main {
 //        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
 //            System.out.println(entry.getKey() + " : " + entry.getValue());
 //        }
-
-
-        for (int i = 0; i < list.size(); i++) {
-            if (!map.containsKey(list.get(i).substring(0, 1))) {
-                map.put(list.get(i).substring(0, 1), new TreeSet<>());
-            }
-            map.get(list.get(i).substring(0, 1)).add(list.get(i));
-        }
-
-        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
-
-    }
-}
