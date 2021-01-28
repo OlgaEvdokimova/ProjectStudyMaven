@@ -1,0 +1,11 @@
+2021-01-29 02:00:57 INFO  Main:41 - 1 Kate kate-91@gmail.com: dress, coat, 
+2021-01-29 02:00:57 INFO  Main:41 - 2 Nick nik_91@tut.by: shirt, 
+2021-01-29 02:00:57 INFO  Main:41 - 3 Olga olga.ev@mail.ru: glasses, pants, 
+2021-01-29 02:00:57 INFO  Main:41 - 4 Lola l_o_l@gmail.com: hat, glasses, swimsuit, 
+2021-01-29 02:00:57 INFO  Main:41 - 5 Kary karykl@gmail.com: 
+2021-01-29 02:00:57 INFO  Main:41 - 6 Pol popol_123@mail.ru: socks, apple, watch, 
+2021-01-29 02:00:57 INFO  ClientRepositoryImp:58 - 7 Pol popol_123@mail.ru: socks, apple watch, 
+2021-01-29 02:00:57 INFO  Main:53 - hat
+2021-01-29 02:00:57 INFO  Main:53 - glasses
+2021-01-29 02:00:57 INFO  Main:53 - swimsuit
+2021-01-29 02:00:57 INFO  Main:61 - No such client
