@@ -39,12 +39,6 @@ public class Text {
         return map;
     }
 
-//    public String[] textWithoutDublicates() {
-//        List<String> textList = textToList();
-//        Set<String> set = new HashSet<>(textList);
-//        return set.toArray(new String[set.size()]);
-//    }
-
     public String ignoreCase() {
         return text.toLowerCase();
     }
