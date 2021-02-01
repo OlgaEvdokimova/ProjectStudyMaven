@@ -1,13 +1,14 @@
-import freeIt.hw18thread.task3.clientRepository.ClientRepositoryImp;
 import freeIt.hw20.Text;
 import org.apache.log4j.PropertyConfigurator;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class HW20MainTest {
@@ -34,7 +35,7 @@ public class HW20MainTest {
     public void test_Text_Without_Duplicates() {
         list = text.textToList();
         Set<String> expected = new TreeSet<>(list);
-        List<String> textWithoutDuplicates = map.entrySet().stream().flatMap(e -> e.getValue().stream()).collect(Collectors.toList());
+        Set<String> textWithoutDuplicates = map.entrySet().stream().flatMap(e -> e.getValue().stream()).collect(Collectors.toSet());
         Assert.assertArrayEquals(expected.toArray(new String[0]), textWithoutDuplicates.toArray(new String[0]));
 
     }

@@ -1,17 +1,13 @@
 package freeIt.hw18thread.task3;
-
 import freeIt.hw18thread.task3.client.Client;
 import freeIt.hw18thread.task3.client.ClientCreator;
 import freeIt.hw18thread.task3.clientRepository.ClientRepository;
-import freeIt.hw18thread.task3.exceptions.WrongEmailException;
 import freeIt.hw18thread.task3.purchase.Purchase;
 import freeIt.hw18thread.task3.clientRepository.ClientRepositoryImp;
-import freeIt.hw18thread.task3.scannerUtil.ScannerUtil;
 import freeIt.hw18thread.task3.validator.Validator;
 import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
