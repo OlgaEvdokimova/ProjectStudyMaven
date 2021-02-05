@@ -1,9 +1,12 @@
 package freeIt.hw21xml.parsing;
 
+import freeIt.hw21xml.Main;
 import freeIt.hw21xml.greenHouse.Enums;
 import freeIt.hw21xml.greenHouse.Flower;
 import freeIt.hw21xml.greenHouse.GrowingTips;
 import freeIt.hw21xml.greenHouse.VisualParameters;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
+    Logger logger = LoggerFactory.getLogger(DOMParseImp.class.getName());
     public DOMParseImp() {
     }
 
@@ -94,7 +98,7 @@ public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
                 }
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         return flowersList;
     }
@@ -148,7 +152,7 @@ public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
                 }
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         return flowersList;
     }

@@ -4,6 +4,9 @@ import freeIt.hw21xml.greenHouse.Enums;
 import freeIt.hw21xml.greenHouse.Flower;
 import freeIt.hw21xml.greenHouse.GrowingTips;
 import freeIt.hw21xml.greenHouse.VisualParameters;
+import freeIt.hw21xml.writing.WritingUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -20,7 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class STAXParseImp implements ParsingIntoObject {
-
+    Logger logger = LoggerFactory.getLogger(STAXParseImp.class.getName());
 
     @Override
     public List<Flower> parseIntoObject(String PATH) {
@@ -106,7 +109,7 @@ public class STAXParseImp implements ParsingIntoObject {
 
             }
         } catch (XMLStreamException | FileNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         return flowersList;
     }

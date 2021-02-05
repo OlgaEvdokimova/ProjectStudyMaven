@@ -1,14 +1,13 @@
 package freeIt.hw21xml.parsing;
-
 import freeIt.hw21xml.greenHouse.Enums;
 import freeIt.hw21xml.greenHouse.Flower;
-
 import freeIt.hw21xml.greenHouse.GrowingTips;
 import freeIt.hw21xml.greenHouse.VisualParameters;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -17,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SAXParseImp implements ParsingIntoObject {
+    Logger logger = LoggerFactory.getLogger(SAXParseImp.class.getName());
     Flower flower;
 
     @Override
@@ -95,7 +95,7 @@ public class SAXParseImp implements ParsingIntoObject {
 
             saxParser.parse(PATH, handler);
         } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.getCause();
+            logger.error(e.getMessage());
         }
         return flowersList;
     }

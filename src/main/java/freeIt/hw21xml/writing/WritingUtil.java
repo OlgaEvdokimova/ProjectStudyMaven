@@ -1,5 +1,8 @@
 package freeIt.hw21xml.writing;
 
+import freeIt.hw21xml.parsing.DOMParseImp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,7 +21,10 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 
 public class WritingUtil {
+   static Logger logger = LoggerFactory.getLogger(WritingUtil.class.getName());
+
     public static void writeDOM(String pathForWrite) {
+
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document document = documentBuilder.parse("src/main/java/freeIt/hw21xml/resources/flower.xml");
@@ -30,7 +36,7 @@ public class WritingUtil {
             transformer.transform(domSource, streamResult);
 
         } catch (ParserConfigurationException | SAXException | IOException | TransformerException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 
@@ -127,7 +133,7 @@ public class WritingUtil {
             writer.writeEndDocument();
             writer.flush();
         } catch (XMLStreamException | IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
 
     }
