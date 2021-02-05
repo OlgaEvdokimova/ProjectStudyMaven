@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding ="UTF-8"?>
 <flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.example.com/flowers /freeIt/hw21xml/resources/scheme.xsd" >
+         xsi:noNamespaceSchemaLocation ="/freeIt/hw21xml/resources/scheme.xsd" >
     <flower name="Peony" origin="Japan">
         <soil>GROUND</soil>
         <visualParameters>
