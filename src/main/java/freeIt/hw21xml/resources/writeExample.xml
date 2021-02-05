@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/flowers /freeIt/hw21xml/resources/scheme.xsd">
+    <flower name="Peony" origin="Japan">
+        <soil>GROUND</soil>
+        <visualParameters>
+            <stemColor>Green</stemColor>
+            <leavesColor>Pink</leavesColor>
+            <size>1</size>
+        </visualParameters>
+        <growingTips>
+            <temp>15</temp>
+            <lighting>Strong</lighting>
+            <watering>Regular</watering>
+        </growingTips>
+        <multiplying>CUTTING</multiplying>
+    </flower>
+    <flower name="Hydrangea" origin="England">
+        <soil>PODZOLIC</soil>
+        <visualParameters>
+            <stemColor>Green</stemColor>
+            <leavesColor>Blue</leavesColor>
+            <size>0.5</size>
+        </visualParameters>
+        <growingTips>
+            <temp>20</temp>
+            <lighting>Strong</lighting>
+            <watering>Infrequent</watering>
+        </growingTips>
+        <multiplying>SEEDS</multiplying>
+    </flower>
+    <flower name="Moss" origin="WildNature">
+        <soil>SOD_PODZOLIC</soil>
+        <visualParameters>
+            <stemColor>Green</stemColor>
+            <leavesColor>Green</leavesColor>
+            <size>0.1</size>
+        </visualParameters>
+        <growingTips>
+            <temp>15</temp>
+            <lighting>Week</lighting>
+            <watering>Occasional</watering>
+        </growingTips>
+        <multiplying>LEAVES</multiplying>
+    </flower>
+<flower name="rosa" origin="Russia"><soil>PODZOLIC</soil><visualParameters><stemColor>Green</stemColor><leavesColor>Red</leavesColor><size>2</size></visualParameters><growingTips><temp>20</temp><lighting>Strong</lighting><watering>Often</watering></growingTips><multiplying>SEED</multiplying></flower></flowers>

@@ -14,12 +14,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DOMParseImp implements Parsing {
+public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
     public DOMParseImp() {
     }
 
     @Override
-    public List<Flower> parseInto(String PATH) {
+    public List<Flower> parseIntoObject(String PATH) {
         String stemColor = "", leavesColor= "", temp = "", lighting = "", watering = "";
         Double size = 0.0;
         List<Flower> flowersList = new ArrayList<>();

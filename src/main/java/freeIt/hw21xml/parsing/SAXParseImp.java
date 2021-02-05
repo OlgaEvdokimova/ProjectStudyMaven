@@ -16,17 +16,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SAXParseImp implements Parsing {
+public class SAXParseImp implements ParsingIntoObject {
     Flower flower;
 
-
     @Override
-    public List<String> parseIntoText(String PATH) {
-        return new ArrayList<>();
-    }
-
-    @Override
-    public List<Flower> parseInto(String PATH) {
+    public List<Flower> parseIntoObject(String PATH) {
         List<Flower> flowersList = new ArrayList<>();
         SAXParserFactory factory = SAXParserFactory.newInstance();
 
@@ -45,8 +39,6 @@ public class SAXParseImp implements Parsing {
                     if (qName.equalsIgnoreCase("flower")) {
                         name = attributes.getValue("name");
                         origin = attributes.getValue("origin");
-//                        flower.setName(name);
-//                        flower.setOrigin(origin);
                         flag = true;
                     }
                     tag = qName;
@@ -60,7 +52,6 @@ public class SAXParseImp implements Parsing {
                         if (!information.isEmpty()) {
 
                             if (tag.equalsIgnoreCase("soil"))
-                                //flower.setSoil(Enums.Soil.valueOf(information));
                                 soil = information;
 
                             if (tag.equalsIgnoreCase("stemColor"))
@@ -82,7 +73,6 @@ public class SAXParseImp implements Parsing {
                                 watering = information;
 
                             if (tag.equalsIgnoreCase("multiplying")) {
-                                // flower.setMultiplying(Enums.Multiplying.valueOf(information));
                                 multiplying = information;
                             }
                         }
