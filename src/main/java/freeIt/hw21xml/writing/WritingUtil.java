@@ -8,14 +8,14 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class WritingUtil {
     public static void writeDOM(String pathForWrite) {
@@ -34,7 +34,7 @@ public class WritingUtil {
         }
     }
 
-    public static void add(Document document) {
+    private static void add(Document document) {
         Node root = document.getDocumentElement();
         Element flower = document.createElement("flower");
         flower.setAttribute("name", "rosa");
@@ -68,5 +68,67 @@ public class WritingUtil {
         multiplying.setTextContent("SEED");
         flower.appendChild(multiplying);
         root.appendChild(flower);
+    }
+
+    public static void writeStax(String pathForWrite) {
+        XMLOutputFactory outputFactory =  XMLOutputFactory.newInstance();
+        try {
+            XMLStreamWriter writer = outputFactory.createXMLStreamWriter(new FileWriter(pathForWrite));
+            writer.writeStartDocument("UTF-8", "1.0");
+            writer.writeStartElement("Flowers");
+
+            writer.writeStartElement("flower");
+            writer.writeAttribute("name", "Rosa");
+            writer.writeAttribute("origin", "Belarus");
+
+            writer.writeStartElement("soil");
+            writer.writeCharacters("PODZOLIC");
+            writer.writeEndElement();
+
+            writer.writeStartElement("visualParameters");
+
+            writer.writeStartElement("stemColor");
+            writer.writeCharacters("Green");
+            writer.writeEndElement();
+
+            writer.writeStartElement("leavesColor");
+            writer.writeCharacters("Red");
+            writer.writeEndElement();
+
+            writer.writeStartElement("size");
+            writer.writeCharacters("2");
+            writer.writeEndElement();
+
+            writer.writeEndElement();
+
+            writer.writeStartElement("growingTips");
+
+            writer.writeStartElement("temp");
+            writer.writeCharacters("20");
+            writer.writeEndElement();
+
+            writer.writeStartElement("lighting");
+            writer.writeCharacters("Strong");
+            writer.writeEndElement();
+
+            writer.writeStartElement("watering");
+            writer.writeCharacters("Often");
+            writer.writeEndElement();
+
+            writer.writeEndElement();
+
+            writer.writeStartElement("multiplying");
+            writer.writeCharacters("SEED");
+            writer.writeEndElement();
+
+            writer.writeEndElement();
+
+            writer.writeEndElement();
+            writer.writeEndDocument();
+            writer.flush();
+        } catch (XMLStreamException | IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
