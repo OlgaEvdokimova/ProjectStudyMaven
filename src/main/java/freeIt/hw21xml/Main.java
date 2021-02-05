@@ -6,6 +6,7 @@ import freeIt.hw21xml.parsing.DOMParseImp;
 import freeIt.hw21xml.parsing.ParsingIntoObject;
 import freeIt.hw21xml.parsing.SAXParseImp;
 import freeIt.hw21xml.parsing.STAXParseImp;
+import freeIt.hw21xml.validatorXml.ValidatorXML;
 import freeIt.hw21xml.writing.WritingUtil;
 import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
@@ -114,5 +115,7 @@ public class Main {
         WritingUtil.writeDOM(PATH_WRITE_EXAMPLE_DOM);
         WritingUtil.writeStax("src/main/java/freeIt/hw21xml/resources/writeExStax.xml");
 // got the same
+
+        ValidatorXML.validator();
     }
 }

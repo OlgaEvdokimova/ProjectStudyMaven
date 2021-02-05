@@ -1,52 +1,53 @@
 <?xml version ="1.0" encoding = "UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="https://example.com/">
-    <xsd:element name="flower">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="flowers">
         <xsd:complexType>
-
             <xsd:sequence>
-                <xsd:element name="soil" >
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:string">
-                            <xsd:enumeration value="PODZOLIC"/>
-                            <xsd:enumeration value="GROUND"/>
-                            <xsd:enumeration value="SOD_PODZOLIC"/>
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-                <xsd:element name="visualParameters">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="stemColor" type="xsd:string"/>
-                            <xsd:element name="leavesColor" type="xsd:string"/>
-                            <xsd:element name="size" type="xsd:double"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="growingTips">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="temp" type="xsd:string"/>
-                            <xsd:element name="lighting" type="xsd:string"/>
-                            <xsd:element name="watering" type="xsd:string"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="multiplying" >
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:string">
-                            <xsd:enumeration value="LEAVES"/>
-                            <xsd:enumeration value="CUTTING"/>
-                            <xsd:enumeration value="SEEDS"/>
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-
+            <xsd:element name="flower">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="soil">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="PODZOLIC"/>
+                                    <xsd:enumeration value="GROUND"/>
+                                    <xsd:enumeration value="SOD_PODZOLIC"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="visualParameters">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="stemColor" type="xsd:string"/>
+                                    <xsd:element name="leavesColor" type="xsd:string"/>
+                                    <xsd:element name="size" type="xsd:double"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="growingTips">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="temp" type="xsd:string"/>
+                                    <xsd:element name="lighting" type="xsd:string"/>
+                                    <xsd:element name="watering" type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="multiplying">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="LEAVES"/>
+                                    <xsd:enumeration value="CUTTING"/>
+                                    <xsd:enumeration value="SEEDS"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequence>
+                    <xsd:attribute name="name" type="xsd:string"/>
+                    <xsd:attribute name="origin" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
             </xsd:sequence>
-
-            <xsd:attribute name="name" type="xsd:string"/>
-            <xsd:attribute name="origin" type="xsd:string"/>
-
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>
