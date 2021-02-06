@@ -33,6 +33,15 @@ public class Main {
                 "up, what should he see but a Lamb just beginning to drink a little lower down.";
 
         Text text = new Text(TEXT);
+        List<String> list = new ArrayList<>();
+        Pattern pattern = Pattern.compile("\\w+");
+        Matcher matcher = pattern.matcher(TEXT);
+        while (matcher.find()) {
+            String m = matcher.group().toLowerCase().trim();
+            list.add(m);
+        }
+        Set<String> set = new LinkedHashSet<>(list);
+        System.out.println(set);
         Map<String, Set<String>> map = text.textToMap();
 
 //        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
