@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/flowers /freeIt/hw21xml/resources/scheme.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/freeIt/hw21xml/resources/flowers.xsd">
     <flower name="Peony" origin="Japan">
         <soil>GROUND</soil>
         <visualParameters>

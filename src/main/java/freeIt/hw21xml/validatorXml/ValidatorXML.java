@@ -15,11 +15,11 @@ import java.io.File;
 import java.io.IOException;
 
 public class ValidatorXML {
-   static Logger logger = LoggerFactory.getLogger(Main.class.getName());
+   static Logger logger = LoggerFactory.getLogger(ValidatorXML.class.getName());
     public static void validator(){
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
-        String fileName = "src/main/java/freeIt/hw21xml/resources/flower.xml";
-        String schemaName = "src/main/java/freeIt/hw21xml/resources/scheme.xsd";
+        String fileName = "src/main/java/freeIt/hw21xml/resources/flowers.xml";
+        String schemaName = "src/main/java/freeIt/hw21xml/resources/flowers.xsd";
         SchemaFactory factory = SchemaFactory.newInstance(language);
         File schemaLocation = new File(schemaName);
         try {

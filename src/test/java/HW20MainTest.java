@@ -27,13 +27,23 @@ public class HW20MainTest {
     @Test
     public void test_Text_Without_Duplicates() {
         text = new Text(TEXT);
-        list = text.textToList();
-        Set<String> set = new LinkedHashSet<>(list);
-        String[] expectedArray = {"once", "upon", "a", "time", "wolf", "was", "lapping", "at", "spring", "on", "hillside", "when", "looking", "up", "what", "should", "he", "see", "but", "lamb", "just", "beginning", "to", "drink", "little", "lower", "down"};
-        String[] textWithoutDuplicates = set.toArray(new String[0]);
-        Assert.assertArrayEquals(expectedArray, textWithoutDuplicates);
+        map = text.textToMap();
+        String[] expectedArray = {"a", "at", "beginning", "but", "down", "drink", "he", "hillside", "just", "lamb", "lapping", "little", "looking", "lower", "on", "once", "see", "should", "spring", "time", "to", "up", "upon", "was", "what", "when", "wolf"};
+        Set<String> textWithoutDuplicates = new LinkedHashSet<>(map.entrySet().stream().flatMap(e -> e.getValue().stream()).collect(Collectors.toList()));
+        Assert.assertArrayEquals(expectedArray, textWithoutDuplicates.toArray(new String[0]));
 
     }
+    @Test
+    public void test_Text_Without_Duplicates2() {
+        text = new Text("a, a");
+        list = text.textToList();
+        map = text.textToMap();
+        Set<String> set = new TreeSet<>(list);
+        Set<String> textWithoutDuplicates = new LinkedHashSet<>(map.entrySet().stream().flatMap(e -> e.getValue().stream()).collect(Collectors.toList()));
+        Assert.assertEquals(1, textWithoutDuplicates.size());
+
+    }
+
 
     @Test
     public void test_Ignore_Punctuation() {
@@ -47,13 +57,13 @@ public class HW20MainTest {
     @Test
     public void test_Ignore_Case() {
         text = new Text(TEXT);
-        String expected =  "once upon a time a wolf was lapping at a spring on a hillside, when, looking up, what should he see but a lamb just beginning to drink a little lower down.";
+        String expected = "once upon a time a wolf was lapping at a spring on a hillside, when, looking up, what should he see but a lamb just beginning to drink a little lower down.";
         Assert.assertEquals(expected, text.ignoreCase());
     }
 
 
     @Test
-    public void test_How_Much_Keys_In_Map(){
+    public void test_How_Much_Keys_In_Map() {
         text = new Text(TEXT);
         map = text.textToMap();
         Assert.assertEquals(11, map.entrySet().size());

@@ -1,9 +1,6 @@
 package freeIt.hw21xml.parsing;
 
-import freeIt.hw21xml.greenHouse.Enums;
-import freeIt.hw21xml.greenHouse.Flower;
-import freeIt.hw21xml.greenHouse.GrowingTips;
-import freeIt.hw21xml.greenHouse.VisualParameters;
+import freeIt.hw21xml.greenHouse.*;
 import freeIt.hw21xml.writing.WritingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +27,8 @@ public class STAXParseImp implements ParsingIntoObject {
         String name = "", origin = "", soil = "", stemColor = "", leavesColor= "", temp = "", lighting = "", watering = "", multiplying ="";
         Double size = 0.0;
 
-        List<Flower> flowersList = new ArrayList<>();
+        //List<Flower> flowersList = new ArrayList<>();
+        Flowers flowersList = new Flowers();
         try {
             XMLInputFactory xmlf = XMLInputFactory.newInstance();
             XMLEventReader reader = xmlf.createXMLEventReader(new FileInputStream(PATH));
@@ -103,7 +101,7 @@ public class STAXParseImp implements ParsingIntoObject {
                         flower.setVisualParameters(new VisualParameters(stemColor, leavesColor, size));
                         flower.setGrowingTips(new GrowingTips(temp, lighting, watering));
                         flower.setMultiplying(Enums.Multiplying.valueOf(multiplying));
-                        flowersList.add(flower);
+                        flowersList.getList().add(flower);
                     }
                 }
 
@@ -111,6 +109,6 @@ public class STAXParseImp implements ParsingIntoObject {
         } catch (XMLStreamException | FileNotFoundException e) {
             logger.error(e.getMessage());
         }
-        return flowersList;
+        return flowersList.getList();
     }
 }

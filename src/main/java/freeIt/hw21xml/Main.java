@@ -17,7 +17,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Main {
-    public static final String PATH = "src/main/java/freeIt/hw21xml/resources/flower.xml";
+    public static final String PATH = "src/main/java/freeIt/hw21xml/resources/flowers.xml";
     public static final String PATH_WRITE_EXAMPLE_DOM = "src/main/java/freeIt/hw21xml/resources/writeExample.xml";
 
     public static void main(String[] args) {

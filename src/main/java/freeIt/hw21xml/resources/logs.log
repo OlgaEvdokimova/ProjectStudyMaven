@@ -60,3 +60,437 @@
 2021-02-06 02:28:58 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
 2021-02-06 02:28:58 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
 2021-02-06 02:28:58 ERROR Main:35 - validation src/main/java/freeIt/hw21xml/resources/flower.xml is not valid because cvc-complex-type.2.4.d: Invalid content was found starting with element 'flower'. No child element is expected at this point.
+2021-02-07 18:26:56 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 18:26:56 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 18:26:56 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 18:26:56 INFO  Main:37 - 
+
+2021-02-07 18:26:56 INFO  Main:41 - name Peony
+2021-02-07 18:26:56 INFO  Main:41 - origin Japan
+2021-02-07 18:26:56 INFO  Main:41 - soil
+2021-02-07 18:26:56 INFO  Main:41 -     GROUND
+2021-02-07 18:26:56 INFO  Main:41 - visualParameters
+2021-02-07 18:26:56 INFO  Main:41 -     stemColor  Green
+2021-02-07 18:26:56 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 18:26:56 INFO  Main:41 -     size  1
+2021-02-07 18:26:56 INFO  Main:41 - growingTips
+2021-02-07 18:26:56 INFO  Main:41 -     temp  15
+2021-02-07 18:26:56 INFO  Main:41 -     lighting  Strong
+2021-02-07 18:26:56 INFO  Main:41 -     watering  Regular
+2021-02-07 18:26:56 INFO  Main:41 - multiplying
+2021-02-07 18:26:56 INFO  Main:41 -     CUTTING
+2021-02-07 18:26:56 INFO  Main:41 - 
+
+2021-02-07 18:26:56 INFO  Main:41 - name Hydrangea
+2021-02-07 18:26:56 INFO  Main:41 - origin England
+2021-02-07 18:26:56 INFO  Main:41 - soil
+2021-02-07 18:26:56 INFO  Main:41 -     PODZOLIC
+2021-02-07 18:26:56 INFO  Main:41 - visualParameters
+2021-02-07 18:26:56 INFO  Main:41 -     stemColor  Green
+2021-02-07 18:26:56 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 18:26:56 INFO  Main:41 -     size  0.5
+2021-02-07 18:26:56 INFO  Main:41 - growingTips
+2021-02-07 18:26:56 INFO  Main:41 -     temp  20
+2021-02-07 18:26:56 INFO  Main:41 -     lighting  Strong
+2021-02-07 18:26:56 INFO  Main:41 -     watering  Infrequent
+2021-02-07 18:26:56 INFO  Main:41 - multiplying
+2021-02-07 18:26:56 INFO  Main:41 -     SEEDS
+2021-02-07 18:26:56 INFO  Main:41 - 
+
+2021-02-07 18:26:56 INFO  Main:41 - name Moss
+2021-02-07 18:26:56 INFO  Main:41 - origin WildNature
+2021-02-07 18:26:56 INFO  Main:41 - soil
+2021-02-07 18:26:56 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 18:26:56 INFO  Main:41 - visualParameters
+2021-02-07 18:26:56 INFO  Main:41 -     stemColor  Green
+2021-02-07 18:26:56 INFO  Main:41 -     leavesColor  Green
+2021-02-07 18:26:56 INFO  Main:41 -     size  0.1
+2021-02-07 18:26:56 INFO  Main:41 - growingTips
+2021-02-07 18:26:56 INFO  Main:41 -     temp  15
+2021-02-07 18:26:56 INFO  Main:41 -     lighting  Week
+2021-02-07 18:26:56 INFO  Main:41 -     watering  Occasional
+2021-02-07 18:26:56 INFO  Main:41 - multiplying
+2021-02-07 18:26:56 INFO  Main:41 -     LEAVES
+2021-02-07 18:26:56 INFO  Main:41 - 
+
+2021-02-07 18:26:56 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 18:26:56 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 18:26:56 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 18:26:56 INFO  Main:103 - 
+
+2021-02-07 18:26:56 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 18:26:56 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 18:26:56 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 18:26:57 ERROR Main:35 - validation src/main/java/freeIt/hw21xml/resources/flower.xml is not valid because cvc-complex-type.2.4.d: Invalid content was found starting with element 'flower'. No child element is expected at this point.
+2021-02-07 19:52:13 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 19:52:13 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 19:52:13 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 19:52:13 INFO  Main:37 - 
+
+2021-02-07 19:52:13 INFO  Main:41 - name Peony
+2021-02-07 19:52:13 INFO  Main:41 - origin Japan
+2021-02-07 19:52:13 INFO  Main:41 - soil
+2021-02-07 19:52:13 INFO  Main:41 -     GROUND
+2021-02-07 19:52:13 INFO  Main:41 - visualParameters
+2021-02-07 19:52:13 INFO  Main:41 -     stemColor  Green
+2021-02-07 19:52:13 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 19:52:13 INFO  Main:41 -     size  1
+2021-02-07 19:52:13 INFO  Main:41 - growingTips
+2021-02-07 19:52:13 INFO  Main:41 -     temp  15
+2021-02-07 19:52:13 INFO  Main:41 -     lighting  Strong
+2021-02-07 19:52:13 INFO  Main:41 -     watering  Regular
+2021-02-07 19:52:13 INFO  Main:41 - multiplying
+2021-02-07 19:52:13 INFO  Main:41 -     CUTTING
+2021-02-07 19:52:13 INFO  Main:41 - 
+
+2021-02-07 19:52:13 INFO  Main:41 - name Hydrangea
+2021-02-07 19:52:13 INFO  Main:41 - origin England
+2021-02-07 19:52:13 INFO  Main:41 - soil
+2021-02-07 19:52:13 INFO  Main:41 -     PODZOLIC
+2021-02-07 19:52:13 INFO  Main:41 - visualParameters
+2021-02-07 19:52:13 INFO  Main:41 -     stemColor  Green
+2021-02-07 19:52:13 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 19:52:13 INFO  Main:41 -     size  0.5
+2021-02-07 19:52:13 INFO  Main:41 - growingTips
+2021-02-07 19:52:13 INFO  Main:41 -     temp  20
+2021-02-07 19:52:13 INFO  Main:41 -     lighting  Strong
+2021-02-07 19:52:13 INFO  Main:41 -     watering  Infrequent
+2021-02-07 19:52:13 INFO  Main:41 - multiplying
+2021-02-07 19:52:13 INFO  Main:41 -     SEEDS
+2021-02-07 19:52:13 INFO  Main:41 - 
+
+2021-02-07 19:52:13 INFO  Main:41 - name Moss
+2021-02-07 19:52:13 INFO  Main:41 - origin WildNature
+2021-02-07 19:52:13 INFO  Main:41 - soil
+2021-02-07 19:52:13 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 19:52:13 INFO  Main:41 - visualParameters
+2021-02-07 19:52:13 INFO  Main:41 -     stemColor  Green
+2021-02-07 19:52:13 INFO  Main:41 -     leavesColor  Green
+2021-02-07 19:52:13 INFO  Main:41 -     size  0.1
+2021-02-07 19:52:13 INFO  Main:41 - growingTips
+2021-02-07 19:52:13 INFO  Main:41 -     temp  15
+2021-02-07 19:52:13 INFO  Main:41 -     lighting  Week
+2021-02-07 19:52:13 INFO  Main:41 -     watering  Occasional
+2021-02-07 19:52:13 INFO  Main:41 - multiplying
+2021-02-07 19:52:13 INFO  Main:41 -     LEAVES
+2021-02-07 19:52:13 INFO  Main:41 - 
+
+2021-02-07 19:52:13 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 19:52:13 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 19:52:13 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 19:52:13 INFO  Main:103 - 
+
+2021-02-07 19:52:13 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 19:52:13 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 19:52:13 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 19:52:14 ERROR Main:35 - validation src/main/java/freeIt/hw21xml/resources/flower.xml is not valid because cvc-complex-type.2.4.d: Invalid content was found starting with element 'flower'. No child element is expected at this point.
+2021-02-07 20:06:02 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 20:06:02 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 20:06:02 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 20:06:02 INFO  Main:37 - 
+
+2021-02-07 20:06:02 INFO  Main:41 - name Peony
+2021-02-07 20:06:02 INFO  Main:41 - origin Japan
+2021-02-07 20:06:02 INFO  Main:41 - soil
+2021-02-07 20:06:02 INFO  Main:41 -     GROUND
+2021-02-07 20:06:02 INFO  Main:41 - visualParameters
+2021-02-07 20:06:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 20:06:02 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 20:06:02 INFO  Main:41 -     size  1
+2021-02-07 20:06:02 INFO  Main:41 - growingTips
+2021-02-07 20:06:02 INFO  Main:41 -     temp  15
+2021-02-07 20:06:02 INFO  Main:41 -     lighting  Strong
+2021-02-07 20:06:02 INFO  Main:41 -     watering  Regular
+2021-02-07 20:06:02 INFO  Main:41 - multiplying
+2021-02-07 20:06:02 INFO  Main:41 -     CUTTING
+2021-02-07 20:06:02 INFO  Main:41 - 
+
+2021-02-07 20:06:02 INFO  Main:41 - name Hydrangea
+2021-02-07 20:06:02 INFO  Main:41 - origin England
+2021-02-07 20:06:02 INFO  Main:41 - soil
+2021-02-07 20:06:02 INFO  Main:41 -     PODZOLIC
+2021-02-07 20:06:02 INFO  Main:41 - visualParameters
+2021-02-07 20:06:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 20:06:02 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 20:06:02 INFO  Main:41 -     size  0.5
+2021-02-07 20:06:02 INFO  Main:41 - growingTips
+2021-02-07 20:06:02 INFO  Main:41 -     temp  20
+2021-02-07 20:06:02 INFO  Main:41 -     lighting  Strong
+2021-02-07 20:06:02 INFO  Main:41 -     watering  Infrequent
+2021-02-07 20:06:02 INFO  Main:41 - multiplying
+2021-02-07 20:06:02 INFO  Main:41 -     SEEDS
+2021-02-07 20:06:02 INFO  Main:41 - 
+
+2021-02-07 20:06:02 INFO  Main:41 - name Moss
+2021-02-07 20:06:02 INFO  Main:41 - origin WildNature
+2021-02-07 20:06:02 INFO  Main:41 - soil
+2021-02-07 20:06:02 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 20:06:02 INFO  Main:41 - visualParameters
+2021-02-07 20:06:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 20:06:02 INFO  Main:41 -     leavesColor  Green
+2021-02-07 20:06:02 INFO  Main:41 -     size  0.1
+2021-02-07 20:06:02 INFO  Main:41 - growingTips
+2021-02-07 20:06:02 INFO  Main:41 -     temp  15
+2021-02-07 20:06:02 INFO  Main:41 -     lighting  Week
+2021-02-07 20:06:02 INFO  Main:41 -     watering  Occasional
+2021-02-07 20:06:02 INFO  Main:41 - multiplying
+2021-02-07 20:06:02 INFO  Main:41 -     LEAVES
+2021-02-07 20:06:02 INFO  Main:41 - 
+
+2021-02-07 20:06:02 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 20:06:02 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 20:06:02 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 20:06:02 INFO  Main:103 - 
+
+2021-02-07 20:06:02 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 20:06:02 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 20:06:02 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 20:06:03 ERROR ValidatorXML:36 - validation src/main/java/freeIt/hw21xml/resources/flower.xml is not valid because cvc-complex-type.2.4.d: Invalid content was found starting with element 'flower'. No child element is expected at this point.
+2021-02-07 23:04:10 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:04:10 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:04:10 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:04:10 INFO  Main:37 - 
+
+2021-02-07 23:04:10 INFO  Main:41 - name Peony
+2021-02-07 23:04:10 INFO  Main:41 - origin Japan
+2021-02-07 23:04:10 INFO  Main:41 - soil
+2021-02-07 23:04:10 INFO  Main:41 -     GROUND
+2021-02-07 23:04:10 INFO  Main:41 - visualParameters
+2021-02-07 23:04:10 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:04:10 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 23:04:10 INFO  Main:41 -     size  1
+2021-02-07 23:04:10 INFO  Main:41 - growingTips
+2021-02-07 23:04:10 INFO  Main:41 -     temp  15
+2021-02-07 23:04:10 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:04:10 INFO  Main:41 -     watering  Regular
+2021-02-07 23:04:10 INFO  Main:41 - multiplying
+2021-02-07 23:04:10 INFO  Main:41 -     CUTTING
+2021-02-07 23:04:10 INFO  Main:41 - 
+
+2021-02-07 23:04:10 INFO  Main:41 - name Hydrangea
+2021-02-07 23:04:10 INFO  Main:41 - origin England
+2021-02-07 23:04:10 INFO  Main:41 - soil
+2021-02-07 23:04:10 INFO  Main:41 -     PODZOLIC
+2021-02-07 23:04:10 INFO  Main:41 - visualParameters
+2021-02-07 23:04:10 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:04:10 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 23:04:10 INFO  Main:41 -     size  0.5
+2021-02-07 23:04:10 INFO  Main:41 - growingTips
+2021-02-07 23:04:10 INFO  Main:41 -     temp  20
+2021-02-07 23:04:10 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:04:10 INFO  Main:41 -     watering  Infrequent
+2021-02-07 23:04:10 INFO  Main:41 - multiplying
+2021-02-07 23:04:10 INFO  Main:41 -     SEEDS
+2021-02-07 23:04:10 INFO  Main:41 - 
+
+2021-02-07 23:04:10 INFO  Main:41 - name Moss
+2021-02-07 23:04:10 INFO  Main:41 - origin WildNature
+2021-02-07 23:04:10 INFO  Main:41 - soil
+2021-02-07 23:04:10 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 23:04:10 INFO  Main:41 - visualParameters
+2021-02-07 23:04:10 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:04:10 INFO  Main:41 -     leavesColor  Green
+2021-02-07 23:04:10 INFO  Main:41 -     size  0.1
+2021-02-07 23:04:10 INFO  Main:41 - growingTips
+2021-02-07 23:04:10 INFO  Main:41 -     temp  15
+2021-02-07 23:04:10 INFO  Main:41 -     lighting  Week
+2021-02-07 23:04:10 INFO  Main:41 -     watering  Occasional
+2021-02-07 23:04:10 INFO  Main:41 - multiplying
+2021-02-07 23:04:10 INFO  Main:41 -     LEAVES
+2021-02-07 23:04:10 INFO  Main:41 - 
+
+2021-02-07 23:04:10 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:04:10 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:04:10 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:04:10 INFO  Main:103 - 
+
+2021-02-07 23:04:10 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:04:10 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:04:10 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:04:10 ERROR ValidatorXML:35 - validation src/main/java/freeIt/hw21xml/resources/flower.xml is not valid because cvc-complex-type.2.4.d: Invalid content was found starting with element 'flower'. No child element is expected at this point.
+2021-02-07 23:27:12 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:27:12 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:27:12 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:27:12 INFO  Main:37 - 
+
+2021-02-07 23:27:12 INFO  Main:41 - name Peony
+2021-02-07 23:27:12 INFO  Main:41 - origin Japan
+2021-02-07 23:27:12 INFO  Main:41 - soil
+2021-02-07 23:27:12 INFO  Main:41 -     GROUND
+2021-02-07 23:27:12 INFO  Main:41 - visualParameters
+2021-02-07 23:27:12 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:27:12 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 23:27:12 INFO  Main:41 -     size  1
+2021-02-07 23:27:12 INFO  Main:41 - growingTips
+2021-02-07 23:27:12 INFO  Main:41 -     temp  15
+2021-02-07 23:27:12 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:27:12 INFO  Main:41 -     watering  Regular
+2021-02-07 23:27:12 INFO  Main:41 - multiplying
+2021-02-07 23:27:12 INFO  Main:41 -     CUTTING
+2021-02-07 23:27:12 INFO  Main:41 - 
+
+2021-02-07 23:27:12 INFO  Main:41 - name Hydrangea
+2021-02-07 23:27:12 INFO  Main:41 - origin England
+2021-02-07 23:27:12 INFO  Main:41 - soil
+2021-02-07 23:27:12 INFO  Main:41 -     PODZOLIC
+2021-02-07 23:27:12 INFO  Main:41 - visualParameters
+2021-02-07 23:27:12 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:27:12 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 23:27:12 INFO  Main:41 -     size  0.5
+2021-02-07 23:27:12 INFO  Main:41 - growingTips
+2021-02-07 23:27:12 INFO  Main:41 -     temp  20
+2021-02-07 23:27:12 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:27:12 INFO  Main:41 -     watering  Infrequent
+2021-02-07 23:27:12 INFO  Main:41 - multiplying
+2021-02-07 23:27:12 INFO  Main:41 -     SEEDS
+2021-02-07 23:27:12 INFO  Main:41 - 
+
+2021-02-07 23:27:12 INFO  Main:41 - name Moss
+2021-02-07 23:27:12 INFO  Main:41 - origin WildNature
+2021-02-07 23:27:12 INFO  Main:41 - soil
+2021-02-07 23:27:12 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 23:27:12 INFO  Main:41 - visualParameters
+2021-02-07 23:27:12 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:27:12 INFO  Main:41 -     leavesColor  Green
+2021-02-07 23:27:12 INFO  Main:41 -     size  0.1
+2021-02-07 23:27:12 INFO  Main:41 - growingTips
+2021-02-07 23:27:12 INFO  Main:41 -     temp  15
+2021-02-07 23:27:12 INFO  Main:41 -     lighting  Week
+2021-02-07 23:27:12 INFO  Main:41 -     watering  Occasional
+2021-02-07 23:27:12 INFO  Main:41 - multiplying
+2021-02-07 23:27:12 INFO  Main:41 -     LEAVES
+2021-02-07 23:27:12 INFO  Main:41 - 
+
+2021-02-07 23:27:12 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:27:12 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:27:12 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:27:12 INFO  Main:103 - 
+
+2021-02-07 23:27:12 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:27:12 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:27:12 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:27:12 INFO  ValidatorXML:33 - src/main/java/freeIt/hw21xml/resources/flower.xml is valid.
+2021-02-07 23:35:32 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:35:32 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:35:32 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:35:32 INFO  Main:37 - 
+
+2021-02-07 23:35:32 INFO  Main:41 - name Peony
+2021-02-07 23:35:32 INFO  Main:41 - origin Japan
+2021-02-07 23:35:32 INFO  Main:41 - soil
+2021-02-07 23:35:32 INFO  Main:41 -     GROUND
+2021-02-07 23:35:32 INFO  Main:41 - visualParameters
+2021-02-07 23:35:32 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:35:32 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 23:35:32 INFO  Main:41 -     size  1
+2021-02-07 23:35:32 INFO  Main:41 - growingTips
+2021-02-07 23:35:32 INFO  Main:41 -     temp  15
+2021-02-07 23:35:32 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:35:32 INFO  Main:41 -     watering  Regular
+2021-02-07 23:35:32 INFO  Main:41 - multiplying
+2021-02-07 23:35:32 INFO  Main:41 -     CUTTING
+2021-02-07 23:35:32 INFO  Main:41 - 
+
+2021-02-07 23:35:32 INFO  Main:41 - name Hydrangea
+2021-02-07 23:35:32 INFO  Main:41 - origin England
+2021-02-07 23:35:32 INFO  Main:41 - soil
+2021-02-07 23:35:32 INFO  Main:41 -     PODZOLIC
+2021-02-07 23:35:32 INFO  Main:41 - visualParameters
+2021-02-07 23:35:32 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:35:32 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 23:35:32 INFO  Main:41 -     size  0.5
+2021-02-07 23:35:32 INFO  Main:41 - growingTips
+2021-02-07 23:35:32 INFO  Main:41 -     temp  20
+2021-02-07 23:35:32 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:35:32 INFO  Main:41 -     watering  Infrequent
+2021-02-07 23:35:32 INFO  Main:41 - multiplying
+2021-02-07 23:35:32 INFO  Main:41 -     SEEDS
+2021-02-07 23:35:32 INFO  Main:41 - 
+
+2021-02-07 23:35:32 INFO  Main:41 - name Moss
+2021-02-07 23:35:32 INFO  Main:41 - origin WildNature
+2021-02-07 23:35:32 INFO  Main:41 - soil
+2021-02-07 23:35:32 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 23:35:32 INFO  Main:41 - visualParameters
+2021-02-07 23:35:32 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:35:32 INFO  Main:41 -     leavesColor  Green
+2021-02-07 23:35:32 INFO  Main:41 -     size  0.1
+2021-02-07 23:35:32 INFO  Main:41 - growingTips
+2021-02-07 23:35:32 INFO  Main:41 -     temp  15
+2021-02-07 23:35:32 INFO  Main:41 -     lighting  Week
+2021-02-07 23:35:32 INFO  Main:41 -     watering  Occasional
+2021-02-07 23:35:32 INFO  Main:41 - multiplying
+2021-02-07 23:35:32 INFO  Main:41 -     LEAVES
+2021-02-07 23:35:32 INFO  Main:41 - 
+
+2021-02-07 23:35:32 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:35:32 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:35:32 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:35:32 INFO  Main:103 - 
+
+2021-02-07 23:35:32 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:35:32 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:35:32 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:35:33 INFO  ValidatorXML:33 - src/main/java/freeIt/hw21xml/resources/flowers.xml is valid.
+2021-02-07 23:38:02 INFO  Main:31 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:38:02 INFO  Main:31 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:38:02 INFO  Main:31 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:38:02 INFO  Main:37 - 
+
+2021-02-07 23:38:02 INFO  Main:41 - name Peony
+2021-02-07 23:38:02 INFO  Main:41 - origin Japan
+2021-02-07 23:38:02 INFO  Main:41 - soil
+2021-02-07 23:38:02 INFO  Main:41 -     GROUND
+2021-02-07 23:38:02 INFO  Main:41 - visualParameters
+2021-02-07 23:38:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:38:02 INFO  Main:41 -     leavesColor  Pink
+2021-02-07 23:38:02 INFO  Main:41 -     size  1
+2021-02-07 23:38:02 INFO  Main:41 - growingTips
+2021-02-07 23:38:02 INFO  Main:41 -     temp  15
+2021-02-07 23:38:02 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:38:02 INFO  Main:41 -     watering  Regular
+2021-02-07 23:38:02 INFO  Main:41 - multiplying
+2021-02-07 23:38:02 INFO  Main:41 -     CUTTING
+2021-02-07 23:38:02 INFO  Main:41 - 
+
+2021-02-07 23:38:02 INFO  Main:41 - name Hydrangea
+2021-02-07 23:38:02 INFO  Main:41 - origin England
+2021-02-07 23:38:02 INFO  Main:41 - soil
+2021-02-07 23:38:02 INFO  Main:41 -     PODZOLIC
+2021-02-07 23:38:02 INFO  Main:41 - visualParameters
+2021-02-07 23:38:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:38:02 INFO  Main:41 -     leavesColor  Blue
+2021-02-07 23:38:02 INFO  Main:41 -     size  0.5
+2021-02-07 23:38:02 INFO  Main:41 - growingTips
+2021-02-07 23:38:02 INFO  Main:41 -     temp  20
+2021-02-07 23:38:02 INFO  Main:41 -     lighting  Strong
+2021-02-07 23:38:02 INFO  Main:41 -     watering  Infrequent
+2021-02-07 23:38:02 INFO  Main:41 - multiplying
+2021-02-07 23:38:02 INFO  Main:41 -     SEEDS
+2021-02-07 23:38:02 INFO  Main:41 - 
+
+2021-02-07 23:38:02 INFO  Main:41 - name Moss
+2021-02-07 23:38:02 INFO  Main:41 - origin WildNature
+2021-02-07 23:38:02 INFO  Main:41 - soil
+2021-02-07 23:38:02 INFO  Main:41 -     SOD_PODZOLIC
+2021-02-07 23:38:02 INFO  Main:41 - visualParameters
+2021-02-07 23:38:02 INFO  Main:41 -     stemColor  Green
+2021-02-07 23:38:02 INFO  Main:41 -     leavesColor  Green
+2021-02-07 23:38:02 INFO  Main:41 -     size  0.1
+2021-02-07 23:38:02 INFO  Main:41 - growingTips
+2021-02-07 23:38:02 INFO  Main:41 -     temp  15
+2021-02-07 23:38:02 INFO  Main:41 -     lighting  Week
+2021-02-07 23:38:02 INFO  Main:41 -     watering  Occasional
+2021-02-07 23:38:02 INFO  Main:41 - multiplying
+2021-02-07 23:38:02 INFO  Main:41 -     LEAVES
+2021-02-07 23:38:02 INFO  Main:41 - 
+
+2021-02-07 23:38:02 INFO  Main:96 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:38:02 INFO  Main:96 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:38:02 INFO  Main:96 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:38:02 INFO  Main:103 - 
+
+2021-02-07 23:38:02 INFO  Main:112 - Flower{name='Moss, origin='WildNature, soil=SOD_PODZOLIC, visualParameters=stemColor='Green', leavesColor='Green', size=0.1}, growingTips=temp='15', lighting='Week', watering='Occasional'}, multiplying=LEAVES}
+2021-02-07 23:38:02 INFO  Main:112 - Flower{name='Hydrangea, origin='England, soil=PODZOLIC, visualParameters=stemColor='Green', leavesColor='Blue', size=0.5}, growingTips=temp='20', lighting='Strong', watering='Infrequent'}, multiplying=SEEDS}
+2021-02-07 23:38:02 INFO  Main:112 - Flower{name='Peony, origin='Japan, soil=GROUND, visualParameters=stemColor='Green', leavesColor='Pink', size=1.0}, growingTips=temp='15', lighting='Strong', watering='Regular'}, multiplying=CUTTING}
+2021-02-07 23:38:02 INFO  ValidatorXML:33 - src/main/java/freeIt/hw21xml/resources/flowers.xml is valid.

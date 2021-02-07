@@ -44,6 +44,11 @@ public class Main {
         System.out.println(set);
         Map<String, Set<String>> map = text.textToMap();
 
+        Set<String> set1 = new TreeSet<>(list);
+        System.out.println(set1);
+        List<String> textWithoutDuplicates = map.entrySet().stream().flatMap(e -> e.getValue().stream()).collect(Collectors.toList());
+        System.out.println(textWithoutDuplicates);
+        System.out.println(map);
 //        for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
 //            System.out.println(entry.getKey() + " : " + entry.getValue());
 //        }

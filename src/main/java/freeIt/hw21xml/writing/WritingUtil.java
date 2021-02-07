@@ -27,7 +27,7 @@ public class WritingUtil {
 
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("src/main/java/freeIt/hw21xml/resources/flower.xml");
+            Document document = documentBuilder.parse("src/main/java/freeIt/hw21xml/resources/flowers.xml");
             add(document);
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             DOMSource domSource = new DOMSource(document);

@@ -1,10 +1,7 @@
 package freeIt.hw21xml.parsing;
 
 import freeIt.hw21xml.Main;
-import freeIt.hw21xml.greenHouse.Enums;
-import freeIt.hw21xml.greenHouse.Flower;
-import freeIt.hw21xml.greenHouse.GrowingTips;
-import freeIt.hw21xml.greenHouse.VisualParameters;
+import freeIt.hw21xml.greenHouse.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.*;
@@ -26,7 +23,8 @@ public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
     public List<Flower> parseIntoObject(String PATH) {
         String stemColor = "", leavesColor= "", temp = "", lighting = "", watering = "";
         Double size = 0.0;
-        List<Flower> flowersList = new ArrayList<>();
+        Flowers flowersList = new Flowers();
+        //List<Flower> flowersList = new ArrayList<>();
 
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -94,13 +92,13 @@ public class DOMParseImp implements ParsingIntoObject, ParsingIntoText {
                             }
                         }
                     }
-                    flowersList.add(flowerMain);
+                    flowersList.getList().add(flowerMain);
                 }
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {
             logger.error(e.getMessage());
         }
-        return flowersList;
+        return flowersList.getList();
     }
 
 
